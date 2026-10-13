@@ -42,7 +42,7 @@ def analyze_code(directories, typedes):
                 filepath = os.path.join(root, file)
                 current_sloc = 0
                 good_file = False
-                if ".cpp" in filepath or ".c" in filepath:
+                if ".o" not in filepath and ".comp" not in filepath and (".cpp" in filepath or ".c" in filepath):
                     total_srcs += 1
                     good_file = True
                 if ".h" in filepath:
